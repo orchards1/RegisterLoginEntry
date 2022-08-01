@@ -9,9 +9,11 @@ import UIKit
 
 class OTPViewController: UIViewController {
 
+    var id = "0"
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("lihat")
+        print(id)
         // Do any additional setup after loading the view.
     }
     

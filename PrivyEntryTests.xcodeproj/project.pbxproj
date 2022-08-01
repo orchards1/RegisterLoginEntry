@@ -20,6 +20,9 @@
 		B1E075B128976B8D0017942F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075B028976B8D0017942F /* RegisterViewController.swift */; };
 		B1E075B328976CC60017942F /* OTPVerification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E075B228976CC60017942F /* OTPVerification.storyboard */; };
 		B1E075B528976CD40017942F /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075B428976CD40017942F /* OTPViewController.swift */; };
+		B1E075B7289792590017942F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075B6289792590017942F /* Service.swift */; };
+		B1E075BA289799E30017942F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075B9289799E30017942F /* Register.swift */; };
+		B1E075BE28979ECE0017942F /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075BD28979ECE0017942F /* ProgressHUD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		B1E075B028976B8D0017942F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B1E075B228976CC60017942F /* OTPVerification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OTPVerification.storyboard; sourceTree = "<group>"; };
 		B1E075B428976CD40017942F /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		B1E075B6289792590017942F /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		B1E075B9289799E30017942F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		B1E075BD28979ECE0017942F /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 				B1E07580289766AD0017942F /* Assets.xcassets */,
 				B1E07582289766AD0017942F /* LaunchScreen.storyboard */,
 				B1E07585289766AD0017942F /* Info.plist */,
+				B1E075B6289792590017942F /* Service.swift */,
 			);
 			path = PrivyEntryTests;
 			sourceTree = "<group>";
@@ -141,6 +148,7 @@
 		B1E075A7289766D80017942F /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				B1E075B8289799DA0017942F /* Model */,
 				B1E075AD289767EC0017942F /* View */,
 				B1E075AA2897671A0017942F /* Controller */,
 			);
@@ -191,8 +199,17 @@
 			children = (
 				B1E075AE289768000017942F /* Register.storyboard */,
 				B1E075B228976CC60017942F /* OTPVerification.storyboard */,
+				B1E075BD28979ECE0017942F /* ProgressHUD.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B1E075B8289799DA0017942F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1E075B9289799E30017942F /* Register.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,9 +347,12 @@
 			files = (
 				B1E075B528976CD40017942F /* OTPViewController.swift in Sources */,
 				B1E0757C289766AC0017942F /* ViewController.swift in Sources */,
+				B1E075BE28979ECE0017942F /* ProgressHUD.swift in Sources */,
 				B1E07578289766AC0017942F /* AppDelegate.swift in Sources */,
 				B1E0757A289766AC0017942F /* SceneDelegate.swift in Sources */,
+				B1E075BA289799E30017942F /* Register.swift in Sources */,
 				B1E075B128976B8D0017942F /* RegisterViewController.swift in Sources */,
+				B1E075B7289792590017942F /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
