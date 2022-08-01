@@ -34,6 +34,7 @@ class RegisterViewController: UIViewController, URLSessionDelegate {
                         let vc = storyboard.instantiateViewController(withIdentifier: "OTPVerification") as! OTPViewController
                         if let resp = resp {
                             vc.id = resp
+                            vc.no = self.phoneTextField.text!
                             self.navigationController?.pushViewController(vc, animated: true)
                         } else {
                             self.showAlert()

@@ -9,16 +9,16 @@ import Foundation
 
 // MARK: - Register
 struct Register: Codable {
-    let data: DataClass
+    let data: data1
 }
 
 // MARK: - DataClass
-struct DataClass: Codable {
-    let user: User
+struct data1: Codable {
+    let user: RegisterUser
 }
 
 // MARK: - User
-struct User: Codable {
+struct RegisterUser: Codable {
     let id, phone, userStatus, userType: String
     let sugarID, country: String
     let latlong: JSONNull?

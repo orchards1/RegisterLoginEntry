@@ -57,16 +57,48 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Et-4s-DCk">
+                                <rect key="frame" x="80" y="507" width="128" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="vbU-9a-SQv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="verifikasi"/>
+                                <connections>
+                                    <action selector="verifikasiDidTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2jq-7U-rPz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qjp-Tk-LUw">
+                                <rect key="frame" x="72" y="570" width="144" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="QYi-rb-c79"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="re-send OTP"/>
+                                <connections>
+                                    <action selector="resendOTPDidTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="D42-m9-Lef"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Qjp-Tk-LUw" firstAttribute="top" secondItem="5Et-4s-DCk" secondAttribute="bottom" constant="32" id="3iP-Rg-yuh"/>
+                            <constraint firstItem="5Et-4s-DCk" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="DK0-a6-WMT"/>
+                            <constraint firstItem="Qjp-Tk-LUw" firstAttribute="centerX" secondItem="5Et-4s-DCk" secondAttribute="centerX" id="N5f-ix-HsJ"/>
+                            <constraint firstItem="5Et-4s-DCk" firstAttribute="top" secondItem="tw2-4W-u0k" secondAttribute="bottom" constant="32" id="PZN-xh-ZA8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tw2-4W-u0k" secondAttribute="trailing" constant="32" id="Tn0-ha-qdv"/>
                             <constraint firstItem="tw2-4W-u0k" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="bWu-ko-9gS"/>
                             <constraint firstItem="tw2-4W-u0k" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="uCY-Sc-Z3x"/>
                             <constraint firstItem="tw2-4W-u0k" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="vJG-vc-1Td"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="otp1" destination="OD5-jI-Mxp" id="gmW-XF-o5C"/>
+                        <outlet property="otp2" destination="X0s-Mx-0bx" id="z2h-qf-y1o"/>
+                        <outlet property="otp3" destination="Ujf-Jg-CCg" id="Jrw-Dk-zDC"/>
+                        <outlet property="otp4" destination="lWh-Js-DcU" id="jga-72-tFi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

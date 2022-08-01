@@ -23,6 +23,7 @@
 		B1E075B7289792590017942F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075B6289792590017942F /* Service.swift */; };
 		B1E075BA289799E30017942F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075B9289799E30017942F /* Register.swift */; };
 		B1E075BE28979ECE0017942F /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075BD28979ECE0017942F /* ProgressHUD.swift */; };
+		B1E075C028982CA30017942F /* Otp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075BF28982CA30017942F /* Otp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B1E075B6289792590017942F /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B1E075B9289799E30017942F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		B1E075BD28979ECE0017942F /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		B1E075BF28982CA30017942F /* Otp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Otp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				B1E075B9289799E30017942F /* Register.swift */,
+				B1E075BF28982CA30017942F /* Otp.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				B1E075BE28979ECE0017942F /* ProgressHUD.swift in Sources */,
 				B1E07578289766AC0017942F /* AppDelegate.swift in Sources */,
 				B1E0757A289766AC0017942F /* SceneDelegate.swift in Sources */,
+				B1E075C028982CA30017942F /* Otp.swift in Sources */,
 				B1E075BA289799E30017942F /* Register.swift in Sources */,
 				B1E075B128976B8D0017942F /* RegisterViewController.swift in Sources */,
 				B1E075B7289792590017942F /* Service.swift in Sources */,
