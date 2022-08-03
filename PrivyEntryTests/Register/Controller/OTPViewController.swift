@@ -21,7 +21,7 @@ class OTPViewController: UIViewController {
     var resendOTPUrl = "http://pretest-qa.dcidev.id/api/v1/register/otp/request"
     
     var service = Service()
-    let progressHUD = ProgressHUD(text: "Loading..")
+    var progressHUD : ProgressHUD!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,10 @@ class OTPViewController: UIViewController {
         otp2.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         otp3.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         otp4.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        
+        progressHUD = getHUD(text: "Verifying...")
+        self.view.addSubview(progressHUD)
+        self.progressHUD.hide()
 
     }
     @objc func textFieldDidChange(textField: UITextField){
@@ -55,17 +59,16 @@ class OTPViewController: UIViewController {
     }
 
     @IBAction func verifikasiDidTapped(_ sender: Any) {
-        self.view.addSubview(progressHUD)
+        self.progressHUD.show()
         input = otp1.text! + otp2.text! + otp3.text! + otp4.text!
         service.verifOTP(url: otpUrl, id: id, OTP: input) { access, err in
-            print("lihat")
             print(access)
             self.progressHUD.hide()
         }
     }
 
     @IBAction func resendOTPDidTapped(_ sender: Any) {
-        self.view.addSubview(progressHUD)
+        self.progressHUD.show()
         service.resendOTP(url: resendOTPUrl, phone: no) { err in
             self.progressHUD.hide()
         }

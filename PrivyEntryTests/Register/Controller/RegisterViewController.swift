@@ -15,19 +15,25 @@ class RegisterViewController: UIViewController, URLSessionDelegate {
     
     var regUrl = "http://pretest-qa.dcidev.id/api/v1/register"
     var service = Service()
-    let progressHUD = ProgressHUD(text: "Register..")
+    var progressHUD : ProgressHUD!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupProgressHUD()
+    }
+    
+    func setupProgressHUD(){
+        progressHUD = getHUD(text: "Register...")
+        self.view.addSubview(progressHUD)
+        self.progressHUD.hide()
     }
 
     @IBAction func registerDidTapped(_ sender: Any) {
-        self.view.addSubview(progressHUD)
-        let phone = phoneTextField.text
-        if validateRegister() {
-            showAlert()
-        } else {
-            service.postRequest(url: regUrl, username: phone ?? "", password: passwordTextField.text ?? "", country: countryTextField.text ?? "") { resp, err in
+        self.progressHUD.show()
+        if let phone = phoneTextField.text,
+           let pass = passwordTextField.text,
+           let country = countryTextField.text {
+            service.postRequest(url: regUrl, username: phone, password: pass, country: country) { resp, err in
                 if err == nil {
                     DispatchQueue.main.async {
                         let storyboard = UIStoryboard(name: "OTPVerification", bundle: nil)
@@ -37,24 +43,26 @@ class RegisterViewController: UIViewController, URLSessionDelegate {
                             vc.no = self.phoneTextField.text!
                             self.navigationController?.pushViewController(vc, animated: true)
                         } else {
-                            self.showAlert()
+                            self.showAlert(text: "register failed")
                         }
                         self.progressHUD.hide()
                     }
                 }
             }
+        } else {
+            showAlert(text: "empty parameters")
         }
-    }
-    
-    func validateRegister() -> Bool {
-        return phoneTextField.text == "" || passwordTextField.text == "" || countryTextField.text == "" ? true : false  
     }
 }
 
-extension RegisterViewController {
-    func showAlert() {
-        let alert = UIAlertController(title: "empty parameter", message: "please input some parameter", preferredStyle: .alert)
+extension UIViewController {
+    func showAlert(text: String) {
+        let alert = UIAlertController(title: "Error", message: text, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert,animated: true)
+    }
+    func getHUD(text: String) -> ProgressHUD{
+        let progressHUD = ProgressHUD(text: text)
+        return progressHUD
     }
 }

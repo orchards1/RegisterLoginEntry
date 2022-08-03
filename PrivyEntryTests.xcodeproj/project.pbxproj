@@ -24,6 +24,11 @@
 		B1E075BA289799E30017942F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075B9289799E30017942F /* Register.swift */; };
 		B1E075BE28979ECE0017942F /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075BD28979ECE0017942F /* ProgressHUD.swift */; };
 		B1E075C028982CA30017942F /* Otp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075BF28982CA30017942F /* Otp.swift */; };
+		B1E075C32898F11F0017942F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E075C22898F11F0017942F /* Login.storyboard */; };
+		B1E075C52898F4320017942F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075C42898F4320017942F /* LoginViewController.swift */; };
+		B1E075C82899027C0017942F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E075C72899027C0017942F /* Profile.storyboard */; };
+		B1E075CA289905680017942F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075C9289905680017942F /* ProfileViewController.swift */; };
+		B1E075CD289985FF0017942F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075CC289985FF0017942F /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +70,11 @@
 		B1E075B9289799E30017942F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		B1E075BD28979ECE0017942F /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		B1E075BF28982CA30017942F /* Otp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Otp.swift; sourceTree = "<group>"; };
+		B1E075C22898F11F0017942F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		B1E075C42898F4320017942F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B1E075C72899027C0017942F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		B1E075C9289905680017942F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B1E075CC289985FF0017942F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +170,7 @@
 		B1E075A8289766E00017942F /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				B1E075C12898F10D0017942F /* View */,
 				B1E075AB289767220017942F /* Controller */,
 			);
 			path = Login;
@@ -168,6 +179,8 @@
 		B1E075A92897670D0017942F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				B1E075CB289985F30017942F /* Model */,
+				B1E075C6289901A60017942F /* Storyboard */,
 				B1E075AC289767290017942F /* Controller */,
 			);
 			path = Profile;
@@ -185,6 +198,7 @@
 		B1E075AB289767220017942F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B1E075C42898F4320017942F /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,6 +206,7 @@
 		B1E075AC289767290017942F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B1E075C9289905680017942F /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,6 +226,30 @@
 			children = (
 				B1E075B9289799E30017942F /* Register.swift */,
 				B1E075BF28982CA30017942F /* Otp.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B1E075C12898F10D0017942F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1E075C22898F11F0017942F /* Login.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1E075C6289901A60017942F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B1E075C72899027C0017942F /* Profile.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B1E075CB289985F30017942F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1E075CC289985FF0017942F /* Profile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,8 +360,10 @@
 			files = (
 				B1E07584289766AD0017942F /* LaunchScreen.storyboard in Resources */,
 				B1E075AF289768000017942F /* Register.storyboard in Resources */,
+				B1E075C32898F11F0017942F /* Login.storyboard in Resources */,
 				B1E07581289766AD0017942F /* Assets.xcassets in Resources */,
 				B1E075B328976CC60017942F /* OTPVerification.storyboard in Resources */,
+				B1E075C82899027C0017942F /* Profile.storyboard in Resources */,
 				B1E0757F289766AC0017942F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,13 +390,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1E075B528976CD40017942F /* OTPViewController.swift in Sources */,
+				B1E075CD289985FF0017942F /* Profile.swift in Sources */,
 				B1E0757C289766AC0017942F /* ViewController.swift in Sources */,
 				B1E075BE28979ECE0017942F /* ProgressHUD.swift in Sources */,
 				B1E07578289766AC0017942F /* AppDelegate.swift in Sources */,
 				B1E0757A289766AC0017942F /* SceneDelegate.swift in Sources */,
 				B1E075C028982CA30017942F /* Otp.swift in Sources */,
+				B1E075CA289905680017942F /* ProfileViewController.swift in Sources */,
 				B1E075BA289799E30017942F /* Register.swift in Sources */,
 				B1E075B128976B8D0017942F /* RegisterViewController.swift in Sources */,
+				B1E075C52898F4320017942F /* LoginViewController.swift in Sources */,
 				B1E075B7289792590017942F /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

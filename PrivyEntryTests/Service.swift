@@ -8,6 +8,33 @@
 import Foundation
 
 class Service : NSObject {
+    func getProfile(url: String, auth: String, completion: @escaping (Profile?, Error?) -> Void){
+        let url = URL(string: url)!
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue(auth, forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+
+        let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
+
+            guard error == nil else {
+                completion(nil, error)
+                return
+            }
+
+            guard let data = data else {
+                completion(nil, NSError(domain: "dataNilError", code: -100001, userInfo: nil))
+                return
+            }
+
+            do {
+                let profile = try? JSONDecoder().decode(Profile.self, from: data)
+                completion(profile, nil)
+            }
+        })
+        task.resume()
+    }
     
     func resendOTP(url: String, phone: String, completion: @escaping (Error?) -> Void){
         let parameters = ["phone": phone]
@@ -113,6 +140,43 @@ class Service : NSObject {
             do {
                 let register = try? JSONDecoder().decode(Register.self, from: data)
                 completion(register?.data.user.id, nil)
+            }
+        })
+        task.resume()
+    }
+    
+    func login(url: String, username: String, password: String, completion: @escaping (String?, Error?) -> Void) {
+        let parameters = ["phone": username, "password": password, "device_type": "0", "latlong": "", "device_token": "1231"]
+        let url = URL(string: url)!
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+        } catch let error {
+            print(error.localizedDescription)
+            completion(nil, error)
+        }
+
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+
+        let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
+
+            guard error == nil else {
+                completion(nil, error)
+                return
+            }
+
+            guard let data = data else {
+                completion(nil, NSError(domain: "dataNilError", code: -100001, userInfo: nil))
+                return
+            }
+
+            do {
+                let user = try? JSONDecoder().decode(OTPToken.self, from: data)
+                completion(user?.data.user.accessToken, nil)
             }
         })
         task.resume()

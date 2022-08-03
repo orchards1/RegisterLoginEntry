@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Register View Controller-->
+        <!--Register-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="RegisterViewController" customModule="PrivyEntryTests" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,29 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sW-2F-bRi">
-                                <rect key="frame" x="161" y="152" width="92" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mVd-Oi-zFx">
-                                <rect key="frame" x="64" y="221" width="286" height="34"/>
+                                <rect key="frame" x="64" y="152" width="286" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" textContentType="tel"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTy-SK-Zi6">
-                                <rect key="frame" x="64" y="271" width="286" height="34"/>
+                                <rect key="frame" x="64" y="202" width="286" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebE-oj-cbs">
-                                <rect key="frame" x="64" y="321" width="286" height="34"/>
+                                <rect key="frame" x="64" y="252" width="286" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhW-XW-FNE">
-                                <rect key="frame" x="147" y="371" width="120" height="31"/>
+                                <rect key="frame" x="147" y="302" width="120" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="s3a-9O-PQq"/>
                                 </constraints>
@@ -52,7 +46,6 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0sW-2F-bRi" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="1ER-mI-zee"/>
                             <constraint firstItem="eTy-SK-Zi6" firstAttribute="top" secondItem="mVd-Oi-zFx" secondAttribute="bottom" constant="16" id="2fT-1l-3V9"/>
                             <constraint firstItem="bhW-XW-FNE" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="3eF-Yt-k2u"/>
                             <constraint firstItem="eTy-SK-Zi6" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="7he-Wl-XY3"/>
@@ -61,16 +54,21 @@
                             <constraint firstItem="eTy-SK-Zi6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="64" id="NmH-s9-AQn"/>
                             <constraint firstItem="ebE-oj-cbs" firstAttribute="top" secondItem="eTy-SK-Zi6" secondAttribute="bottom" constant="16" id="QVG-OI-1JJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ebE-oj-cbs" secondAttribute="trailing" constant="64" id="ayr-Wv-wFQ"/>
-                            <constraint firstItem="0sW-2F-bRi" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="64" id="b1O-LZ-pfP"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eTy-SK-Zi6" secondAttribute="trailing" constant="64" id="eVp-vg-ApY"/>
                             <constraint firstItem="bhW-XW-FNE" firstAttribute="top" secondItem="ebE-oj-cbs" secondAttribute="bottom" constant="16" id="hCL-yP-VrZ"/>
                             <constraint firstItem="mVd-Oi-zFx" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="lsD-t0-xhe"/>
-                            <constraint firstItem="mVd-Oi-zFx" firstAttribute="top" secondItem="0sW-2F-bRi" secondAttribute="bottom" constant="48" id="mfS-1k-CyR"/>
+                            <constraint firstItem="mVd-Oi-zFx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="64" id="mCG-cP-ljw"/>
                             <constraint firstItem="ebE-oj-cbs" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="xAo-zE-igx"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mVd-Oi-zFx" secondAttribute="trailing" constant="64" id="zpX-Fy-Wm2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7Ma-eC-zYF"/>
+                    <navigationItem key="navigationItem" title="Register" id="7Ma-eC-zYF">
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="agD-6m-UtL">
+                            <connections>
+                                <segue destination="F77-Md-Ljg" kind="push" id="BJJ-9w-Uhf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="countryTextField" destination="ebE-oj-cbs" id="xT4-Bs-cFi"/>
                         <outlet property="passwordTextField" destination="eTy-SK-Zi6" id="3Ph-qb-teJ"/>
@@ -79,7 +77,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="83.705357142857139"/>
+            <point key="canvasLocation" x="822" y="84"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="nd5-UO-O7X">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="F77-Md-Ljg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="oYq-KX-cy6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W9p-MU-awZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1694" y="-100"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="blk-27-q1H">
