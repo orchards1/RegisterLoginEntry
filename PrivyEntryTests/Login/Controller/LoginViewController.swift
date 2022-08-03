@@ -39,10 +39,10 @@ class LoginViewController: UIViewController {
                         if let resp = accessToken {
                             vc.auth = resp
                             self.navigationController?.pushViewController(vc, animated: true)
+                            self.progressHUD.hide()
                         } else {
-                            self.showAlert(text: "register failed")
+                            self.showAlert(text: "login failed")
                         }
-                        self.progressHUD.hide()
                     }
                 }
                 self.progressHUD.hide()

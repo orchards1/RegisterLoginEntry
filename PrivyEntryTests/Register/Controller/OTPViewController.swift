@@ -61,9 +61,21 @@ class OTPViewController: UIViewController {
     @IBAction func verifikasiDidTapped(_ sender: Any) {
         self.progressHUD.show()
         input = otp1.text! + otp2.text! + otp3.text! + otp4.text!
-        service.verifOTP(url: otpUrl, id: id, OTP: input) { access, err in
-            print(access)
-            self.progressHUD.hide()
+        service.verifOTP(url: otpUrl, id: id, OTP: input) { accessToken, err in
+            if err == nil {
+                DispatchQueue.main.async {
+                    let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "Profile") as! ProfileViewController
+                    if let resp = accessToken {
+                        vc.auth = resp
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    } else {
+                        self.showAlert(text: "register failed")
+                    }
+                    self.progressHUD.hide()
+                }
+            }
+
         }
     }
 

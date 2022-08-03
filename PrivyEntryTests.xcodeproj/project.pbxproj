@@ -29,6 +29,7 @@
 		B1E075C82899027C0017942F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E075C72899027C0017942F /* Profile.storyboard */; };
 		B1E075CA289905680017942F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075C9289905680017942F /* ProfileViewController.swift */; };
 		B1E075CD289985FF0017942F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075CC289985FF0017942F /* Profile.swift */; };
+		B1E075CF289AA4E10017942F /* imagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E075CE289AA4E10017942F /* imagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		B1E075C72899027C0017942F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		B1E075C9289905680017942F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B1E075CC289985FF0017942F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		B1E075CE289AA4E10017942F /* imagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				B1E075C9289905680017942F /* ProfileViewController.swift */,
+				B1E075CE289AA4E10017942F /* imagePicker.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				B1E07578289766AC0017942F /* AppDelegate.swift in Sources */,
 				B1E0757A289766AC0017942F /* SceneDelegate.swift in Sources */,
 				B1E075C028982CA30017942F /* Otp.swift in Sources */,
+				B1E075CF289AA4E10017942F /* imagePicker.swift in Sources */,
 				B1E075CA289905680017942F /* ProfileViewController.swift in Sources */,
 				B1E075BA289799E30017942F /* Register.swift in Sources */,
 				B1E075B128976B8D0017942F /* RegisterViewController.swift in Sources */,
